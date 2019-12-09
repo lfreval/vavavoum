@@ -1,11 +1,18 @@
 ﻿Public Class Voiture
+    Inherits Véhicule
     Private _roues As String = "4x195/55R16"
 
     Public Property lesRoues As String
         Get
             Return _roues
         End Get
-        Set(value As String)
+        Protected Set(value As String)
+            _roues = value
         End Set
     End Property
+
+
+    Public Overrides Function ToString() As String
+        Return _roues & MyBase.ToString
+    End Function
 End Class
