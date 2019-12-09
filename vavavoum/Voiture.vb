@@ -15,4 +15,8 @@
     Public Overrides Function ToString() As String
         Return _roues & MyBase.ToString
     End Function
+
+    Public Function getMoteur() As String
+        Return _moteur
+    End Function
 End Class

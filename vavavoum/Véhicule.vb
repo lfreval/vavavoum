@@ -1,7 +1,7 @@
 ﻿Public Class Véhicule
     Private _chassis As String = "RT"
     Private _carrosserie As String = "rouge"
-    Private _moteur As String = "V6"
+    Protected _moteur As String = "V6"
 
     Public Property leMoteur As String
         Get

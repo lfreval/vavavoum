@@ -7,7 +7,7 @@ Module Module1
         Dim maClio As New Voiture()
         'maClio.lesRoues = "3x155/55R14"
         Console.WriteLine(maClio)
-        Console.WriteLine(maClio.leMoteur)
+        Console.WriteLine(maClio.getMoteur)
         Console.ReadKey()
     End Sub
 
