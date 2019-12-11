@@ -3,7 +3,7 @@ Option Strict On
 
 Module Module1
     ReadOnly maClio As New Voiture()
-    Public monTrajet As New Trajet()
+    Private monTrajet As Trajet
     ReadOnly listeDeCommutateurs As New List(Of String) From {"--help", "-help", "/?"}
 
     Sub Main()
