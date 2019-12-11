@@ -31,4 +31,32 @@
     Sub Aide()
         Console.WriteLine("ce programme permet d'enregistrer un trajet effectué en voiture")
     End Sub
+
+    Function TestSaisir() As Boolean
+        Dim OK As Boolean = True
+        Dim valeur As Object = Nothing
+
+        valeur = Saisir("chaine", "String")
+        If TypeOf valeur Is String Then
+            OK = OK And True
+        Else
+            OK = OK And False
+        End If
+
+        valeur = Saisir("entier", "Integer")
+        If TypeOf valeur Is Integer Then
+            OK = OK And True
+        Else
+            OK = OK And False
+        End If
+
+        valeur = Saisir("entier", "Autre Chose")
+        If valeur Is Nothing Then
+            OK = OK And True
+        Else
+            OK = OK And False
+        End If
+
+        Return OK
+    End Function
 End Module
