@@ -2,7 +2,7 @@
     Inherits Véhicule
     Private _roues As String = "4x195/55R16"
 
-    Public Property lesRoues As String
+    Public Property LesRoues As String
         Get
             Return _roues
         End Get
@@ -16,7 +16,7 @@
         Return _roues & MyBase.ToString
     End Function
 
-    Public Function getMoteur() As String
-        Return _moteur
+    Public Function GetMoteur() As String
+        Return LeMoteur
     End Function
 End Class

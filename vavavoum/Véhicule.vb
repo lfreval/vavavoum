@@ -1,13 +1,14 @@
 ﻿Public Class Véhicule
-    Private _chassis As String = "RT"
-    Private _carrosserie As String = "rouge"
-    Protected _moteur As String = "V6"
+    Private ReadOnly _chassis As String = "RT"
+    Private ReadOnly _carrosserie As String = "rouge"
+    Private _moteur As String = "V6"
 
-    Public Property leMoteur As String
+    Public Property LeMoteur As String
         Get
             Return _moteur
         End Get
         Set(value As String)
+            _moteur = value
         End Set
     End Property
 
