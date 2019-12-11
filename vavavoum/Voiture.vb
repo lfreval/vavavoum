@@ -1,4 +1,7 @@
-﻿Public Class Voiture
+﻿''' <summary>
+''' Une voiture est un type de véhicule terrestre avec des roues
+''' </summary>
+Public Class Voiture
     Inherits Véhicule
     Private _roues As String = "4x195/55R16"
 

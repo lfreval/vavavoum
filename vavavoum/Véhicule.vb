@@ -1,4 +1,7 @@
-﻿Public Class Véhicule
+﻿''' <summary>
+''' La classe Véhicule est la classe mère de tous les véhicules
+''' </summary>
+Public Class Véhicule
     Private ReadOnly _chassis As String = "RT"
     Private ReadOnly _carrosserie As String = "rouge"
     Private _moteur As String = "V6"

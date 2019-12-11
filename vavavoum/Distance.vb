@@ -1,4 +1,7 @@
-﻿Public Class Distance
+﻿''' <summary>
+''' Une distance avec l'unité de distance
+''' </summary>
+Public Class Distance
     Private _d As Integer = 0
 
     Public Property laDistance As Integer
