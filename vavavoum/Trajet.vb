@@ -4,17 +4,21 @@
 ''' et d'y associer la distance parcourue
 ''' </summary>
 Public Class Trajet
-    Private _départ As String = "ici"
-    Private _arrivée As String = "là"
+    Private ReadOnly _départ As String = "ici"
+    Private ReadOnly _arrivée As String = "là"
     Private ReadOnly _distance As Distance = New Distance
 
-    Public Sub Saisir()
-        Console.Write(My.Resources.Départ)
-        _départ = Console.ReadLine()
-
-        Console.Write(My.Resources.Arrivée)
-        _arrivée = Console.ReadLine()
-
-        _distance.laDistance = 300
+    Public Sub New()
     End Sub
+
+    Public Sub New(départ As String, arrivée As String, distance As Integer)
+        _départ = départ
+        _arrivée = arrivée
+        _distance = New Distance(distance)
+    End Sub
+
+    Public Overrides Function ToString() As String
+        Return _départ & " -> " & _arrivée & " : " & _distance.LaDistance
+    End Function
+
 End Class
