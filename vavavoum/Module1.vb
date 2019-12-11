@@ -19,4 +19,7 @@ Module Module1
 
     End Sub
 
+    Sub Aide()
+        Console.WriteLine("ce programme permet d'enregistrer un trajet effectué en voiture")
+    End Sub
 End Module

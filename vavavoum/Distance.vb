@@ -4,7 +4,7 @@
 Public Class Distance
     Private _d As Integer = 0
 
-    Public Property laDistance As Integer
+    Public Property LaDistance As Integer
         Get
             Return _d
         End Get
