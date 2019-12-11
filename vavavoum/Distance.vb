@@ -26,14 +26,26 @@ Public Class Distance
     End Function
 
     Public Shared Operator &(c1 As String, d1 As Distance) As String
-        Return c1 & d1.ToString
+        If d1 IsNot Nothing Then
+            Return c1 & d1.ToString
+        Else
+            Return Nothing
+        End If
     End Operator
 
     Public Shared Widening Operator CType(v As Distance) As String
-        Return v.ToString
+        If v IsNot Nothing Then
+            Return v.ToString
+        Else
+            Return Nothing
+        End If
     End Operator
 
     Public Shared Operator &(d1 As Distance, c1 As String) As String
-        Return d1.ToString & c1
+        If d1 IsNot Nothing Then
+            Return d1.ToString & c1
+        Else
+            Return Nothing
+        End If
     End Operator
 End Class
