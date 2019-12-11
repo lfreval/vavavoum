@@ -19,7 +19,7 @@ Module Module1
             End If
         Next
 
-        monTrajet = New Trajet(Saisir(My.Resources.Départ, "String"), Saisir(My.Resources.Départ, "String"), Saisir("Distance ?", "Integer"))
+        monTrajet = New Trajet(CType(Saisir(My.Resources.Départ, "String"), String), CType(Saisir(My.Resources.Départ, "String"), String), CInt(Saisir("Distance ?", "Integer")))
         Console.WriteLine(monTrajet)
         Console.ReadKey()
 
