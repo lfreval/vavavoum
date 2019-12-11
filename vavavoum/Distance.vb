@@ -3,6 +3,7 @@
 ''' </summary>
 Public Class Distance
     Private _d As Integer = 0
+    Private ReadOnly _unité = "km"
 
     Public Sub New()
 
@@ -19,5 +20,9 @@ Public Class Distance
         End Set
 
     End Property
+
+    Public Overrides Function ToString() As String
+        Return _d & _unité
+    End Function
 
 End Class
