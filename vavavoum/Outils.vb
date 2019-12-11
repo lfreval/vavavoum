@@ -33,24 +33,23 @@
     End Sub
 
     Function TestSaisir() As Boolean
-        Dim OK As Boolean = True
-        Dim valeur As Object = Nothing
+        Dim valeur As Object
 
         valeur = Saisir("chaine", "String")
         If TypeOf valeur IsNot String Then
-            OK = OK And False
+            Return False
         End If
 
         valeur = Saisir("entier", "Integer")
         If TypeOf valeur IsNot Integer Then
-            OK = OK And False
+            Return False
         End If
 
         valeur = Saisir("entier", "Autre Chose")
         If valeur IsNot Nothing Then
-            OK = OK And False
+            Return False
         End If
 
-        Return OK
+        Return True
     End Function
 End Module
