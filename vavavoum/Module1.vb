@@ -15,7 +15,7 @@ Module Module1
         For Each argument As String In My.Application.CommandLineArgs
             If listeDeCommutateurs.Contains(argument) Then
                 Aide()
-                Exit Sub
+                Environment.Exit(0)
             End If
         Next
 
